@@ -9,9 +9,9 @@ struct node {
 
 struct node *root = NULL;
 
-void cernode(int k) {
+void cernode(int x) {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
-    newnode->data = k;
+    newnode->data = x;
     newnode->left = NULL;
     newnode->right = NULL;
     if (root == NULL) {
@@ -100,14 +100,14 @@ void ser(int item) {
 void inorderTraversal(struct node *root) {
     if (root != NULL) {
         inorderTraversal(root->left);
-        printf("%d\t", root->data);
+        printf("%d  ", root->data);
         inorderTraversal(root->right);
     }
 }
 
 void preorderTraversal(struct node *root) {
     if (root != NULL) {
-        printf("%d\t", root->data);
+        printf("%d  ", root->data);
         preorderTraversal(root->left);
         preorderTraversal(root->right);
     }
@@ -117,42 +117,43 @@ void postorderTraversal(struct node *root) {
     if (root != NULL) {
         postorderTraversal(root->left);
         postorderTraversal(root->right);
-        printf("%d\t", root->data);
+        printf("%d  ", root->data);
     }
 }
 
 int main() {
     while (1) {
         int ch;
-        printf("\n1.CREATE NODE\n2.INSERT NODE\n3.DELETE NODE\n4.SEARCH NODE\n5.INORDER TRAVERSAL\n6.PREORDER TRAVERSAL\n7.POSTORDER TRAVERSAL\n8.EXIT\n\nENTER YOUR CHOICE: ");
+	    printf("\n-------BINARY SEARCH TREE OPERATIONS-------\n");
+        printf("\n1.Create node\n2.Insert node\n3.Delete node\n4.Search node\n5.Inorder traversal\n6.Preorder traversal\n7.Postorder traversal\n8.Exit\n\nEnter your choice: ");
         scanf("%d", &ch);
         switch (ch) {
             case 1: {
-                int k;
+                int x;
                 printf("Enter the element of Node: ");
-                scanf("%d", &k);
-                cernode(k);
+                scanf("%d", &x);
+                cernode(x);
                 break;
             }
             case 2: {
-                int k1;
+                int x1;
                 printf("\nEnter the key to be inserted: ");
-                scanf("%d", &k1);
-                ins(k1);
+                scanf("%d", &x1);
+                ins(x1);
                 break;
             }
             case 3: {
-                int k2;
+                int x2;
                 printf("\nEnter the key to be deleted: ");
-                scanf("%d", &k2);
-                root = del(root, k2); // Update the root after deletion
+                scanf("%d", &x2);
+                root = del(root, x2);
                 break;
             }
             case 4: {
-                int k3;
+                int x3;
                 printf("\nEnter the key to be searched: ");
-                scanf("%d", &k3);
-                ser(k3);
+                scanf("%d", &x3);
+                ser(x3);
                 break;
             }
             case 5:
