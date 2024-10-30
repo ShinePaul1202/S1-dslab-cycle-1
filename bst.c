@@ -124,54 +124,47 @@ void postorderTraversal(struct node *root) {
 int main() {
     while (1) {
         int ch;
-	    printf("\n-------BINARY SEARCH TREE OPERATIONS-------\n");
-        printf("\n1.Create node\n2.Insert node\n3.Delete node\n4.Search node\n5.Inorder traversal\n6.Preorder traversal\n7.Postorder traversal\n8.Exit\n\nEnter your choice: ");
+	printf("\n-------BINARY SEARCH TREE OPERATIONS-------\n");
+        printf("\n1.Insert node\n2.Delete node\n3.Search node\n4.Inorder traversal\n5.Preorder traversal\n6.Postorder traversal\n7.Exit\n\nEnter your choice: ");
         scanf("%d", &ch);
         switch (ch) {
             case 1: {
-                int x;
-                printf("Enter the element of Node: ");
-                scanf("%d", &x);
-                cernode(x);
-                break;
-            }
-            case 2: {
                 int x1;
                 printf("\nEnter the key to be inserted: ");
                 scanf("%d", &x1);
                 ins(x1);
                 break;
             }
-            case 3: {
+            case 2: {
                 int x2;
                 printf("\nEnter the key to be deleted: ");
                 scanf("%d", &x2);
                 root = del(root, x2);
                 break;
             }
-            case 4: {
+            case 3: {
                 int x3;
                 printf("\nEnter the key to be searched: ");
                 scanf("%d", &x3);
                 ser(x3);
                 break;
             }
-            case 5:
+            case 4:
                 printf("Inorder Traversal: ");
                 inorderTraversal(root);
                 printf("\n");
                 break;
-            case 6:
+            case 5:
                 printf("Preorder Traversal: ");
                 preorderTraversal(root);
                 printf("\n");
                 break;
-            case 7:
+            case 6:
                 printf("Postorder Traversal: ");
                 postorderTraversal(root);
                 printf("\n");
                 break;
-            case 8:
+            case 7:
                 printf("\nExiting.....\n");
                 exit(0);
             default:
@@ -180,4 +173,3 @@ int main() {
     }
     return 0;
 }
-
