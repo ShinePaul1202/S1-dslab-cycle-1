@@ -110,7 +110,7 @@ void insert_pos() {
         }
         temp->next = newnode;
     }
-   
+    
     count++;
     printf("\nNode inserted at position %d.\n", pos);
 }
@@ -223,3 +223,4 @@ int main() {
     } while (ch != 8);
     return 0;
 }
+
