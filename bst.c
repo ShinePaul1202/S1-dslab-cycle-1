@@ -132,13 +132,6 @@ int main() {
         printf("\n1.Insert node\n2.Delete node\n3.Search node\n4.Inorder traversal\n5.Preorder traversal\n6.Postorder traversal\n7.Exit\n\nEnter your choice: ");
         scanf("%d", &ch);
         switch (ch) {
-            /*case 1: {
-                int x;
-                printf("Enter the element of Node: ");
-                scanf("%d", &x);
-                cernode(x);
-                break;
-            }*/
             case 1: {
                 int x1;
                 printf("\nEnter the key to be inserted: ");
