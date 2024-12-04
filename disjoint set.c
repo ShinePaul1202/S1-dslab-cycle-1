@@ -6,6 +6,7 @@ struct node {
     int data;
 }*heads[50],*tails[50];
 static int countRoot = 0;
+
 void makeSet(int x) {
     struct node *new=(struct node *)malloc(sizeof(struct node));
     new->rep=new;
@@ -15,6 +16,7 @@ void makeSet(int x) {
     tails[countRoot]=new;
     countRoot++;
 }
+
 struct node* find(int a) {
     int i;
     struct node *tmp;
@@ -28,6 +30,7 @@ struct node* find(int a) {
     }
     return NULL;
 }
+
 void unionSets(int a, int b) {
     int i, j, pos, flag = 0;
     struct node *tail2;
@@ -64,6 +67,7 @@ void unionSets(int a, int b) {
         }
     }
 }
+
 int search(int x) {
     int i;
     struct node *tmp;
@@ -103,6 +107,7 @@ void displaySets() {
         printf(" }\n");
     }
 }
+
 int main() {
     int choice, x, y, setSize;
     printf("Enter the size of the set (1 to 20): ");
