@@ -110,11 +110,11 @@ void displaySets() {
 
 int main() {
     int choice, x, y, setSize;
-    printf("Enter the size of the set (1 to 20): ");
+    printf("Enter the size of the set (1 to 30): ");
     scanf("%d", &setSize);
 
-    while (setSize<=0 || setSize>20) {
-        printf("Please enter a size between 1 and 20: ");
+    while (setSize<=0 || setSize>30) {
+        printf("Please enter a size between 1 and 30: ");
         scanf("%d", &setSize);
     }
 
@@ -130,7 +130,8 @@ int main() {
         }
     }
     do {
-        printf("\n1. Display representatives");
+        printf("\nMENU:\n");
+	printf("\n1. Display representatives");
         printf("\n2. Set Union");
         printf("\n3. Find element");
         printf("\n4. Display sets");
