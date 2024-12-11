@@ -166,9 +166,9 @@ int main() {
     do {
         printf("\nMenu:\n");
         printf("1. Display Graph\n");
-        printf("2. Perform DFS Traversal\n");
-        printf("3. Perform BFS Traversal\n");
-        printf("4. Perform Topological Sort\n");
+        printf("2. DFS Traversal\n");
+        printf("3. BFS Traversal\n");
+        printf("4. Topological Sort\n");
         printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
